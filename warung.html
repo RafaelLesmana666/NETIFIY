@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Warung umi</title>
+</head>
+<body>
+	<div class="logo">
+		<b>Warung umi</b>
+	</div>
+	<form method="post">
+		<p>Nasi
+			<select name="Nasi">
+				<option value="Nasi uduk" name="Nasi uduk">Nasi uduk</option>
+				<option value="Nasi liwet" name="2">Nasi liwet</option>
+		</select>
+	</p>
+	<p>Tambahan
+		<select name="Tambahan">
+			<option value="Tempe" name="1">Tempe</option>
+			<option value="Lalap" name="2">Lalap</option>
+			<option value="Tahu" name="3">Tahu</option>
+		</select>
+	</p>
+	<p>Minuman
+		<select name="Minuman">
+			<option value="Air mineral" name="1">Air mineral</option>
+			<option value="Teh manis" name="2">Teh manis</option>
+			<option value="Aneka jus" name="3">Aneka jus</option>
+		</select>
+	</p>
+	<input type="submit" value="kirim" name="submit">
+</form>
+	<?php
+		if(isset($_POST['submit'])){
+			$nasi=$_POST['Nasi'];
+			$tambahan=$_POST['Tambahan'];
+			$minuman=$_POST['Minuman'];
+		if ($nasi = "Nasi uduk")
+			echo "$Nasi Rp. 30.000";
+			
+		}
+		?>
+
+</body>
+</html>
